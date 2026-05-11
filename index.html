@@ -38,6 +38,7 @@
       --slate-300: #cbd5e1;
       --slate-400: #94a3b8;
       --slate-500: #64748b;
+      --slate-600: #475569;
       --glass-bg: rgba(255, 255, 255, 0.05);
       --glass-border: rgba(255, 255, 255, 0.08);
       --radius-sm: 8px;
@@ -94,6 +95,7 @@
       transform: translateY(32px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
+
     .anim-fade-up.visible {
       opacity: 1;
       transform: translateY(0);
@@ -285,7 +287,6 @@
 
     .nav-cta { display: flex; align-items: center; gap: 12px; }
 
-    /* Mobile hamburger */
     .nav-toggle {
       display: none; flex-direction: column;
       justify-content: center; gap: 5px;
@@ -304,7 +305,6 @@
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* Mobile drawer */
     .nav-mobile-drawer {
       display: none; position: absolute;
       top: 100%; left: 0; right: 0;
@@ -936,55 +936,42 @@
 
     .cta-note { margin-top: 20px; font-size: 0.78rem; color: var(--slate-600); }
 
-   /* =============================================
-   FOOTER
-============================================= */
-#footer {
-  background: var(--navy-950);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 34px 20px;
-}
+    /* =============================================
+       FOOTER
+    ============================================= */
+    #footer {
+      background: var(--navy-950);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 34px 0;
+    }
 
-.footer-bottom {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding-top: 0;
-  border-top: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+    .footer-bottom {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-.footer-copy {
-  font-size: 0.78rem;
-  color: var(--slate-500);
-  line-height: 1.8;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-}
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--slate-500);
+      line-height: 1.8;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
 
-.footer-copy strong {
-  color: var(--white);
-  font-weight: 800;
-}
+    .footer-copy strong {
+      color: var(--white);
+      font-weight: 800;
+    }
 
-.footer-copy .developer-name {
-  color: var(--indigo-300);
-  font-weight: 800;
-}
-
-@media (max-width: 640px) {
-  #footer {
-    padding: 28px 16px;
-  }
-
-  .footer-copy {
-    font-size: 0.72rem;
-    line-height: 1.7;
-  }
-}
+    .footer-copy .developer-name {
+      color: var(--indigo-300);
+      font-weight: 800;
+    }
 
     /* =============================================
        RESPONSIVE
@@ -1002,9 +989,6 @@
       .workflow-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
       .workflow-steps::before { display: none; }
       .roles-grid { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr; gap: 36px; }
-      .footer-bottom { flex-direction: column; gap: 12px; }
-      .footer-meta { text-align: left; }
     }
 
     @media (max-width: 768px) {
@@ -1015,6 +999,17 @@
       .workflow-steps { grid-template-columns: 1fr; gap: 32px; }
       .security-points { grid-template-columns: 1fr; }
       .cta-card { padding: 44px 28px; }
+    }
+
+    @media (max-width: 640px) {
+      #footer {
+        padding: 28px 0;
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+        line-height: 1.7;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1097,7 +1092,6 @@
     <div class="container">
       <div class="hero-inner">
 
-        <!-- Content -->
         <div class="hero-content">
           <div class="hero-badge">
             <span class="badge-dot" aria-hidden="true"></span>
@@ -1150,7 +1144,6 @@
           </div>
         </div>
 
-        <!-- Dashboard Mockup -->
         <div class="hero-visual" aria-hidden="true">
           <div class="dashboard-mockup">
 
@@ -1198,7 +1191,7 @@
                   <div class="mock-list-left">
                     <div class="mock-avatar">AH</div>
                     <div>
-                      <div class="mock-list-name">Adam Afif</div>
+                      <div class="mock-list-name">Ahmad Hafiz</div>
                       <div class="mock-list-detail">WFH Request &bull; 12 May</div>
                     </div>
                   </div>
@@ -1208,7 +1201,7 @@
                   <div class="mock-list-left">
                     <div class="mock-avatar">SN</div>
                     <div>
-                      <div class="mock-list-name">Faizal Kutip</div>
+                      <div class="mock-list-name">Siti Norzahra</div>
                       <div class="mock-list-detail">Daily Log &bull; Pending</div>
                     </div>
                   </div>
@@ -1218,7 +1211,7 @@
                   <div class="mock-list-left">
                     <div class="mock-avatar">RR</div>
                     <div>
-                      <div class="mock-list-name">Zakwan Rusydi</div>
+                      <div class="mock-list-name">Razif Ramli</div>
                       <div class="mock-list-detail">Endorsement &bull; 11 May</div>
                     </div>
                   </div>
@@ -1647,67 +1640,16 @@
   ==================================================== -->
   <footer id="footer" aria-label="Site footer">
     <div class="container">
-
-      <div class="footer-inner">
-
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="footer-logo-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-              </svg>
-            </div>
-            <div class="footer-logo-text">
-              <span class="name">HADIR</span>
-              <span class="tagline">Hybrid Attendance, Daily Input &amp; Reporting</span>
-            </div>
-          </div>
-          <p class="footer-desc">
-            A professional WFH request, daily reporting, attendance monitoring, and endorsement platform for institutional staff management at the Faculty of Sports Science and Recreation, Universiti Teknologi MARA.
-          </p>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          <strong>&copy; <span id="currentYear"></span> HADIR.</strong>
+          Designed &amp; Developed by
+          <span class="developer-name">Mohd Azim Nural Azhan</span>.<br />
+          Faculty of Sports Science and Recreation &bull; All Rights Reserved &bull; Universiti Teknologi MARA
         </div>
-
-        <div>
-          <div class="footer-nav-title">Quick Links</div>
-          <ul class="footer-nav-links" role="list">
-            <li>
-              <a href="https://fsrshahalam.github.io/hadir/app" target="_blank" rel="noopener noreferrer">
-                Launch HADIR
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#features">
-                Features
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#workflow">
-                Workflow
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#roles">
-                Roles
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
       </div>
-      
-<footer class="app-footer">
-  <div class="footer-bottom footer-centered">
-    <div class="footer-copy">
-      <strong>&copy; <span id="currentYear"></span> HADIR.</strong>
-      Designed &amp; Developed by <strong>Mohd Azim Nural Azhan</strong>.<br />
-      Faculty of Sports Science and Recreation &bull; All Rights Reserved &bull; Universiti Teknologi MARA
     </div>
-  </div>
-</footer>
+  </footer>
 
 
   <!-- ====================================================
@@ -1755,7 +1697,7 @@
       }
     });
 
-    // Smooth scroll for anchor links (polyfill for older browsers)
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
         var id = this.getAttribute('href');
